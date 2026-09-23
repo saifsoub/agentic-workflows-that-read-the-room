@@ -48,6 +48,23 @@ If the exercise isn't ready in 20 seconds, please check the [Actions](../../acti
 
 </details>
 
+## Local site build
+
+Build the Astro site from `/site`:
+
+```bash
+npm install
+npm run build
+```
+
+To generate publish-ready metadata for a real deployment target, set `SITE_URL` when building:
+
+```bash
+SITE_URL=https://example.your-domain.dev npm run build
+```
+
+This sets Astro's site URL so published output can include deployment-ready canonical URLs.
+
 ---
 
 &copy; 2026 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
