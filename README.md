@@ -1,12 +1,12 @@
 # Agentic Workflows That Read the Room
 
-_Learn how to install GitHub Agentic Workflows and create an AI-powered workflow that keeps Mona's website current._
+_Learn how to install GitHub Agentic Workflows and create an AI-powered workflow that keeps Mona's website current and publish-ready._
 
 ## Welcome
 
 - **Who is this for**: Developers, DevOps engineers, and anyone curious about AI-powered automation in GitHub repositories.
 - **What you'll learn**: How to install the `gh aw` extension, author an agentic workflow in markdown, and run it so proposed changes flow through pull requests.
-- **What you'll build**: Repository-level agentic workflow setup plus an agentic workflow that drafts updates to Mona's GitHub Info website using her notes, the GitHub Blog, and the GitHub Changelog—then opens a pull request for review.
+- **What you'll build**: Repository-level agentic workflow setup plus an agentic workflow that drafts updates to Mona's GitHub Info website using her notes, the GitHub Blog, and the GitHub Changelog—then opens a pull request for review so the site stays publish-ready.
 - **Prerequisites**:
   - A GitHub account with access to GitHub Copilot
   - Basic familiarity with GitHub repositories, branches, and pull requests
@@ -47,6 +47,23 @@ If the exercise isn't ready in 20 seconds, please check the [Actions](../../acti
 - If the page shows a failed job, please submit an issue. Nice, you found a bug! 🐛
 
 </details>
+
+## Local site build
+
+Build the Astro site from `/site`:
+
+```bash
+npm install
+npm run build
+```
+
+To generate publish-ready metadata for a real deployment target, set `SITE_URL` when building:
+
+```bash
+SITE_URL=https://example.your-domain.dev npm run build
+```
+
+This sets Astro's site URL so published output can include deployment-ready canonical URLs.
 
 ---
 
